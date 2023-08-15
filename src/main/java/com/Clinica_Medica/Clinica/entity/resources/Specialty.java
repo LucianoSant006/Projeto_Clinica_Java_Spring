@@ -1,0 +1,16 @@
+package com.Clinica_Medica.Clinica.entity.resources;
+
+public enum Specialty {
+	CARDIOLOGIA,
+	ONCOLOGIA,
+	PEDIATRIA,
+	CLINICA_GERAL,
+	GINECOLOGIA,
+	UROLOGIA,
+	PNEUMOLISTA,
+	ORTOPEDIA,
+	OTORRINOLARINGOLOGIA,
+	NEUROLOGIA,
+	PROCTOLOGIA
+
+}
