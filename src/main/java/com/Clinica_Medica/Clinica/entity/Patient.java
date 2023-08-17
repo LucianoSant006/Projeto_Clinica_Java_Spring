@@ -17,6 +17,7 @@ public class Patient {
 	private String name;
 	private LocalDate birthday;
 	private String insurance;
+	private String cpf;
 	
 	public Long getId() {
 		return id;
@@ -41,6 +42,12 @@ public class Patient {
 	}
 	public void setInsurance(String insurance) {
 		this.insurance = insurance;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	
 	
