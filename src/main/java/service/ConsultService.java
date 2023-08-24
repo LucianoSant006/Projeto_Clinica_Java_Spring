@@ -15,6 +15,8 @@ import com.Clinica_Medica.Clinica.repository.ConsultRepository;
 
 @Service
 public class ConsultService {
+	
+	
 
 	@Autowired
 	private ConsultRepository consultRepository;
@@ -47,5 +49,19 @@ public class ConsultService {
 			 }
 		 }
 			 
+	 }
+	 
+	 public Consult scheduleAppointment(Consult consult){
+		 
+		 validateConsult(consult);
+		 verifyAvailability(consult);
+		 return consultRepository.save(consult);
+		 
+	 }
+	 
+	 public List<Consult> consultList(){
+		 
+		return consultRepository.findAll();
+		 
 	 }
 }
