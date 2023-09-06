@@ -2,12 +2,13 @@
 import React, {useEffect, useState} from 'react';
 import PatientList from './PatientList';
 import PatientEditForm from './PatientEditform';
+import {axios} from 'axios'; 
 
 const PatientsPage = () => {
     const [isEditing,setIsEditing] = useState(false);
     const [editingPatientId, setEditingPatientId] = useState(null);
 
-    const handleDeleteClick = (id) => {
+    const handleDeleteClick = async (id) => {
         try{
             await axios.delete(`/api/patients/${id}`);
             console.log(`Patient com ID ${id} rxcluido com suceso.`);

@@ -8,7 +8,7 @@ const PatientEditForm = ({patient, onSave}) => {
     const handleSave = async () => {
         try{
             const updatePatient = {id: patient.id,nome,cpf};
-            await axios.put(`/api/patients/${patient.id}`,updatedPatient);
+            await axios.put(`/api/patients/${patient.id}`,updatePatient);
             console.log(`Patient com ID ${patient.id} atualizado com sucesso.`);
             onSave();
         }
